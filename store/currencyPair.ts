@@ -9,7 +9,7 @@ export const useCurrencyPair = defineStore('currencyPairStore', () => {
     const currentPair: Ref<String> = ref('BTCUSDT')  
 
     watch(currentPair, (cur, old) => {
-        history.value.push({
+        history.value.unshift({
             new: String(cur),
             old:String(old),
             changeTime: new Date().toLocaleString('en-GB', { timeZone: 'UTC' }),

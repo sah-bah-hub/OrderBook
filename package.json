@@ -13,6 +13,7 @@
     "@pinia/nuxt": "^0.5.1",
     "nuxt": "^3.11.2",
     "pinia": "^2.1.7",
+    "sass": "^1.76.0",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0",
     "vuetify-nuxt-module": "^0.13.4"

@@ -1,0 +1,25 @@
+.header {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+    position: fixed;
+    width: 100%;
+    background: white;
+    border-bottom: 2px lightgray solid;
+    z-index: 2;
+    .router-link-active {
+        color: black;
+        font-weight: bold;
+    }
+    &__logo {
+        img {
+            height: 70px;
+        }
+    }
+    &__navigate {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+    }
+}

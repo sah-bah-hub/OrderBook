@@ -1,0 +1,82 @@
+.order-book {
+    padding-top: 70px;
+    max-height: 100vh;
+    overflow: hidden;
+    &__table {
+        height: calc(50vh - 64px);
+    }
+    &__options {
+    }
+}
+.order-table {
+    .v-table__wrapper::-webkit-scrollbar
+    {
+        width: 8px;
+        background-color: #F5F5F5;
+    }
+    
+    .v-table__wrapper::-webkit-scrollbar-thumb
+    {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #e2e2e2;
+    }
+    &__header {
+        position: sticky;
+        top: 0px;
+        background: white;
+        position: sticky;
+    }
+    &__header-quantity {
+        display: none;
+    }
+    &__header-total {
+    }
+    &__body {
+    }
+    &__body-quantity {
+        display: none;
+    }
+    &__body-total {
+    }
+}
+.bids {
+    .order-table__header-price,
+    .order-table__body-price {
+        color: rgb(10 126 81);
+    }
+}
+.asks {
+    .order-table__header-price,
+    .order-table__body-price {
+        color: rgb(135 24 38);
+    }
+}
+
+
+
+@media screen and (min-width: 500px) {
+    .order-table {
+        &__header-quantity {
+            display: table-cell;
+        }
+        &__body-quantity {
+            display: table-cell;
+        }
+    }
+}
+@media screen and (min-width: 768px) {
+    .order-table {
+        width: 100%;
+    }
+    .order-book {
+        &__content {
+            display: flex;
+            gap: 16px;
+            padding: 0 16px;
+        }
+        &__table {
+            height: calc(100vh - 130px);
+        }
+    }
+}

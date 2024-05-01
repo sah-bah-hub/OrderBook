@@ -1,37 +1,39 @@
 <template>
-    <v-select
-        label="currency pair"
-        :items="items"
-        variant="solo-filled"
-        :item-props="true"
-        v-model="store.currentPair"
-    />
-    
-    <v-table>
-        <thead>
-            <tr>
-                <th>
-                    old value
-                </th>
-                <th>
-                    new value
-                </th>
-                <th>
-                    change time
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr
-                v-for="item in store.history"
-                :key="item.changeTime"
-            >
-                <td>{{ item.old }}</td>
-                <td>{{ item.new }}</td>
-                <td>{{ item.changeTime }}</td>
-            </tr>
-        </tbody>
-    </v-table>
+    <div class="main-page">
+        <v-select
+            label="currency pair"
+            :items="items"
+            variant="solo-filled"
+            :item-props="true"
+            v-model="store.currentPair"
+        />
+        <v-table>
+            <thead>
+                <tr>
+                    <th>
+                        old value
+                    </th>
+                    <th>
+                        new value
+                    </th>
+                    <th>
+                        change time
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr
+                    v-for="item in store.history"
+                    :key="item.changeTime"
+                >
+                    <td>{{ item.old }}</td>
+                    <td>{{ item.new }}</td>
+                    <td>{{ item.changeTime }}</td>
+                </tr>
+            </tbody>
+        </v-table>
+
+    </div>
 </template>
 
 <script setup lang="ts">
