@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
     devtools: { enabled: true },
     app: {
-        baseURL: '/dist/',
+        baseURL: '/Order-Book-deploy/',
         head: {
             title: 'Order Book',
             meta: [
