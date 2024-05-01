@@ -1,4 +1,14 @@
 <template>
+    <Head>
+        <Title>
+            Option
+        </Title>
+        <Meta
+            name="description"
+            hid="description"
+            content='Option'
+        />
+    </Head>
     <div class="main-page">
         <v-select
             label="currency pair"

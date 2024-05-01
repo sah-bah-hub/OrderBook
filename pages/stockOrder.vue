@@ -1,4 +1,14 @@
 <template>
+    <Head>
+        <Title>
+            Order Book
+        </Title>
+        <Meta
+            name="description"
+            hid="description"
+            content='Order Book'
+        />
+    </Head>
     <section class="order-book">
         <div class="order-book__content">
             <v-table class="order-book__table order-table bids">

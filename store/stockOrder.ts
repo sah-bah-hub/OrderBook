@@ -33,8 +33,6 @@ export const useStockOrder = defineStore('stockOrderStore', () => {
             const { data } = await useFetch(`https://api.binance.com/api/v3/depth?symbol=${store.currentPair}&limit=1000`);
             const response = data.value;
             lastUpdateId.value = response.lastUpdateId as number;
-            console.log(response);
-            
             depthData.value = {
                 asks: response.asks.map((e: number[]) => depthItemConstructor(e)),
                 bids: response.bids.map((e: number[]) => depthItemConstructor(e)),

@@ -5,8 +5,6 @@
     &__table {
         height: calc(50vh - 64px);
     }
-    &__options {
-    }
 }
 .order-table {
     .v-table__wrapper::-webkit-scrollbar
@@ -30,14 +28,8 @@
     &__header-quantity {
         display: none;
     }
-    &__header-total {
-    }
-    &__body {
-    }
     &__body-quantity {
         display: none;
-    }
-    &__body-total {
     }
 }
 .bids {
