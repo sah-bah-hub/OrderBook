@@ -24,6 +24,7 @@ export const useStockOrder = defineStore('stockOrderStore', () => {
 
         }
     }
+    
     const depthData: Ref<Depth> = ref({ asks: [], bids: [] });
     const lastUpdateId: Ref<number> = ref(0);
     

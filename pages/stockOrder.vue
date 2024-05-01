@@ -10,6 +10,9 @@
         />
     </Head>
     <section class="order-book">
+        <h1 class="order-book__header">
+            {{ currencyPairstore.currenyName }}
+        </h1>
         <div class="order-book__content">
             <v-table class="order-book__table order-table bids">
                 <thead class="order-table__header">
@@ -79,8 +82,9 @@
 </template>
 
 <script setup lang="ts">
-
 import { useStockOrder } from '~/store/stockOrder';
+import { useCurrencyPair } from '~/store/currencyPair';
+const currencyPairstore = useCurrencyPair();
 const store = useStockOrder();
 
 await store.getDepth();

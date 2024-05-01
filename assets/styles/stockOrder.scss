@@ -2,11 +2,20 @@
     padding-top: 70px;
     max-height: 100vh;
     overflow: hidden;
+    &__header {
+        padding: 0 16px;
+    }
     &__table {
-        height: calc(50vh - 64px);
+        height: calc(50vh - 82px);
+        th {
+            width: 33%;
+        }
     }
 }
 .order-table {
+    .v-table__wrapper {
+        overflow-y: scroll;
+    }
     .v-table__wrapper::-webkit-scrollbar
     {
         width: 8px;
@@ -68,7 +77,7 @@
             padding: 0 16px;
         }
         &__table {
-            height: calc(100vh - 130px);
+            height: calc(100vh - 165px);
         }
     }
 }

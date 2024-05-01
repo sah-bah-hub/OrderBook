@@ -8,6 +8,19 @@ export const useCurrencyPair = defineStore('currencyPairStore', () => {
 
     const currentPair: Ref<String> = ref('BTCUSDT')  
 
+    const currenyName = computed(() => {
+        if (currentPair.value = 'BTCUSDT') {
+            return 'Bitcoin / Tether';
+        }
+        if (currentPair.value = 'BNBBTC') {
+            return 'Binance Coin / Bitcoin';
+        }
+        if (currentPair.value = 'ETHBTC') {
+            return 'Ethereum / Bitcoin';
+        }
+    });  
+
+
     watch(currentPair, (cur, old) => {
         history.value.unshift({
             new: String(cur),
@@ -29,5 +42,5 @@ export const useCurrencyPair = defineStore('currencyPairStore', () => {
             currentPair.value = currentPairInLocalStorage;
         }
     })
-    return { history, currentPair }
+    return { history, currentPair, currenyName }
 })
